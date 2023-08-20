@@ -12,8 +12,14 @@ const Skills: React.FC<ISkills> = () => (
   <motion.div
     initial={{ scale: 0, opacity: 0 }}
     whileInView={{ scale: 1, opacity: 1 }}
-    className="relative flex flex-row w-full h-full justify-between"
+    className="relative flex flex-col gap-8 w-full h-full justify-between"
   >
+    <header>
+      <h2 className="text-blue800 text-8 font-bold uppercase text-center">
+        Habilidades
+      </h2>
+    </header>
+
     <Swiper
       spaceBetween={0}
       slidesPerView={4}
@@ -27,7 +33,7 @@ const Skills: React.FC<ISkills> = () => (
       }}
       pagination={{ clickable: true }}
       loop
-      className="items-center"
+      className="items-center w-full flex"
     >
       {skillsList.map((skill) => (
         <SwiperSlide

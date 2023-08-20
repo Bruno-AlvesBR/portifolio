@@ -1,13 +1,15 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body className="bg-white950 font-inter">
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
-}
+const Document = () => (
+  <Html lang="en">
+    <Head />
+    <title>Bruno Alves Portifólio</title>
+
+    <body className="bg-white950 font-inter">
+      <Main />
+      <NextScript />
+    </body>
+  </Html>
+);
+
+export default Document;

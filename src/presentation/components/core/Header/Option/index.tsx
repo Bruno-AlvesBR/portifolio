@@ -11,7 +11,7 @@ const Option: React.FC<IOption> = ({ label, slug, isSelected }) => (
   <div
     className={`relative h-full flex items-center ${
       isSelected
-        ? "before:w-full before:h-1 before:absolute before:bottom-0 before:bg-blue700"
+        ? "before:w-full before:h-1 before:absolute before:bottom-0 before:bg-blue700 before:rounded-2"
         : ""
     }`}
   >
