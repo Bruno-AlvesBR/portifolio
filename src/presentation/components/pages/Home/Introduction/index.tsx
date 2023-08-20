@@ -24,13 +24,18 @@ const Introduction: React.FC<IIntroduction> = ({}) => (
       </div>
 
       <div className="flex flex-row gap-8">
-        <Button className="uppercase">
+        <Button className="uppercase" href="#contacts">
           <p className="p-none text-4 font-semibold uppercase text-white950">
             contato
           </p>
         </Button>
 
-        <Button hierarchy="secondary" className="uppercase">
+        <Button
+          hierarchy="secondary"
+          className="uppercase"
+          href="/bruno-alves-curriculo.pdf"
+          isDownload
+        >
           <p className="p-none text-4 font-semibold uppercase text-blue600">
             currículo
           </p>
