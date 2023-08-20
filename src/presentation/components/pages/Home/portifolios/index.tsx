@@ -62,6 +62,8 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
               src={`https://raw.githubusercontent.com/bruno-alvesbr/${repository.name}/${repository.default_branch}/public/project.webp`}
               alt={`project ${repository.name} default image`}
               layout="fill"
+              placeholder="blur"
+              blurDataURL={`https://raw.githubusercontent.com/bruno-alvesbr/${repository.name}/${repository.default_branch}/public/project.webp`}
             />
           </Link>
         </SwiperSlide>
