@@ -8,22 +8,22 @@ const menuList: Array<IMenuList> = [
   {
     id: 0,
     label: "início",
-    slug: "inicio",
+    slug: "start",
   },
   {
     id: 1,
     label: "sobre",
-    slug: "sobre",
+    slug: "about",
   },
   {
     id: 2,
     label: "habilidades",
-    slug: "habilidades",
+    slug: "habilitties",
   },
   {
     id: 3,
     label: "serviços",
-    slug: "servicos",
+    slug: "services",
   },
   {
     id: 4,
@@ -32,11 +32,6 @@ const menuList: Array<IMenuList> = [
   },
   {
     id: 5,
-    label: "blog",
-    slug: "blog",
-  },
-  {
-    id: 6,
     label: "contatos",
     slug: "contatos",
   },

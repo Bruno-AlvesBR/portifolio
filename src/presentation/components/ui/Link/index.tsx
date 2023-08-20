@@ -1,11 +1,17 @@
 import NextLink, { LinkProps } from "next/link";
-import { PropsWithChildren, ReactNode, useMemo } from "react";
+import {
+  AnchorHTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+  useMemo,
+} from "react";
 
 export interface ILink extends LinkProps, PropsWithChildren<LinkProps> {
   noDecoration?: boolean;
   disabled?: boolean;
   onClick?: () => void;
   className?: string;
+  target?: AnchorHTMLAttributes<HTMLAnchorElement>["target"];
 }
 
 const Link: React.FC<ILink> = ({
@@ -15,6 +21,7 @@ const Link: React.FC<ILink> = ({
   disabled,
   onClick,
   className,
+  target,
   ...props
 }) => {
   const styles = useMemo(() => {
@@ -35,7 +42,7 @@ const Link: React.FC<ILink> = ({
       onClick={onClick}
       onKeyDown={onClick}
     >
-      {children}
+      <a target={target}>{children}</a>
     </NextLink>
   );
 };

@@ -18,7 +18,7 @@ const Introduction: React.FC<IIntroduction> = ({}) => (
         </h2>
 
         <p className="text-6 font-medium">
-          Sou <strong className="text-blue800">Engenheiro de Software</strong>
+          Sou <strong className="text-blue800">Desenvolvedor Full-Stack</strong>
         </p>
       </div>
 
@@ -37,7 +37,7 @@ const Introduction: React.FC<IIntroduction> = ({}) => (
       </div>
     </div>
 
-    <div className="relative w-full h-full max-h-[300px] max-w-[300px] flex justify-center items-center m-auto">
+    <div className="relative max-h-[300px] min-h-[300px] min-w-[300px] max-w-[300px] flex justify-center items-center m-auto">
       <motion.div
         initial={{ scale: 0 }}
         animate={{
@@ -50,11 +50,12 @@ const Introduction: React.FC<IIntroduction> = ({}) => (
       >
         <Image
           src="/profile.png"
-          alt=""
+          alt="image user profile"
           placeholder="blur"
           blurDataURL="/profile.png"
           layout="fill"
           objectFit="cover"
+          priority
         />
       </motion.div>
     </div>

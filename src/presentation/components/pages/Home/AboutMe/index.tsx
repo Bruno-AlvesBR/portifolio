@@ -9,7 +9,7 @@ const AboutMe: React.FC<IAboutMe> = () => (
   <motion.div
     initial={{ scale: 0, opacity: 0 }}
     whileInView={{ scale: 1, opacity: 1 }}
-    className="relative flex flex-row w-full h-full gap-16"
+    className="relative flex flex-row w-full h-full gap-16 overflow-hidden"
   >
     <motion.div
       whileHover={{ rotate: 10 }}
@@ -28,13 +28,13 @@ const AboutMe: React.FC<IAboutMe> = () => (
       <h1 className="text-blue800 text-8 font-bold uppercase">sobre mim</h1>
 
       <p className="text-5">
-        I am Victory Deo Full Stack Congolese developer with 4 years of
-        experience. My passion for web development began in 2018 and from then
-        on, I did everything I could to break into this path, while having fun
-        on the various projects developed. My experience acquired over the
-        course of the projects allows me to better understand the expectations
-        of a client and to respond precisely to the need requested according to
-        the field of activity.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </p>
 
       <Button>
