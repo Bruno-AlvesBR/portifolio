@@ -30,16 +30,18 @@ const AboutMe: React.FC<IAboutMe> = () => (
       </h1>
 
       <p className="text-5 sm:text-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
+        Olá, meu nome é Bruno Alves, sou um desenvolvedor FullStack Web, com 1
+        ano e 7 meses de experiência profissional na área de desenvolvimento de
+        software. Aplico conhecimentos em práticas utilizando minhas hards
+        skills no âmbito técnico e soft skills em comunicação e tomadas de
+        decisões.
       </p>
 
-      <Button className="sm:w-full max-w-full justify-center">
+      <Button
+        className="sm:w-full max-w-full justify-center"
+        href="/bruno-alves-curriculo.pdf"
+        isDownload
+      >
         <p className="p-none text-4 font-medium uppercase text-white950">
           CURRÍCULO
         </p>
