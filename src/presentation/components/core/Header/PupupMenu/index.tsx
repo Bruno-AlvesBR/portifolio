@@ -5,10 +5,11 @@ import { menuList } from "../list";
 import { Option } from "../Option";
 
 interface IPopupMenu {
+  setIsOpenedMenu(value: boolean): void;
   isOpenedMenu: boolean;
 }
 
-const PopupMenu: React.FC<IPopupMenu> = ({ isOpenedMenu }) => {
+const PopupMenu: React.FC<IPopupMenu> = ({ isOpenedMenu, setIsOpenedMenu }) => {
   const { asPath } = useRouter();
 
   return (
@@ -20,6 +21,7 @@ const PopupMenu: React.FC<IPopupMenu> = ({ isOpenedMenu }) => {
       {menuList.map((option) => (
         <Option
           key={option.id}
+          onClick={() => setIsOpenedMenu(false)}
           {...option}
           isSelected={
             asPath.includes(option.slug) ||

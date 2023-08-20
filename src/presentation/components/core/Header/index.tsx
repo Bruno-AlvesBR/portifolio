@@ -29,7 +29,10 @@ const Header = () => {
         </nav>
       </motion.header>
 
-      <PopupMenu isOpenedMenu={isOpenedMenu} />
+      <PopupMenu
+        isOpenedMenu={isOpenedMenu}
+        setIsOpenedMenu={setIsOpenedMenu}
+      />
     </>
   );
 };

@@ -6,9 +6,7 @@ import { skillsList } from "./list";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
-interface ISkills {}
-
-const Skills: React.FC<ISkills> = () => (
+const Skills = () => (
   <motion.div
     initial={{ scale: 0, opacity: 0 }}
     whileInView={{ scale: 1, opacity: 1 }}
@@ -21,10 +19,9 @@ const Skills: React.FC<ISkills> = () => (
     </header>
 
     <Swiper
-      spaceBetween={0}
-      slidesPerView={4}
+      spaceBetween={200}
+      slidesPerView={"auto"}
       initialSlide={0}
-      centeredSlides
       autoplay={{
         delay: 5500,
         disableOnInteraction: false,
@@ -37,7 +34,7 @@ const Skills: React.FC<ISkills> = () => (
     >
       {skillsList.map((skill) => (
         <SwiperSlide
-          className="relative w-[80rem] p-8 m-auto flex"
+          className="relative min-w-[100px] max-w-[100px] p-8 m-auto flex"
           key={skill.id}
         >
           <motion.div

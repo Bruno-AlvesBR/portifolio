@@ -12,7 +12,7 @@ interface IHomePresentation {
 
 const HomePresentation: React.FC<IHomePresentation> = ({ repositories }) => (
   <div className="relative flex flex-col w-full h-full">
-    <MaxContainer id="start" className="py-32 flex bg-gray100">
+    <MaxContainer id="start" className="py-32 sm:py-8 flex bg-gray100">
       <Introduction />
     </MaxContainer>
 
