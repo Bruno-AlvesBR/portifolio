@@ -19,7 +19,7 @@ const Services: React.FC<IServices> = ({}) => (
       </h2>
     </header>
 
-    <main className="flex flex-row gap-8">
+    <main className="flex flex-row gap-8 md:flex-wrap items-center justify-center">
       {serviceList.map(({ icon, id, ...props }) => (
         <ServiceCard key={id} icon={icon()} id={id} {...props} />
       ))}

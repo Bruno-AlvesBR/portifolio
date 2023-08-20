@@ -5,17 +5,22 @@ interface IOption {
   label: string;
   slug: string;
   isSelected: boolean;
+  onClick?(): void;
 }
 
-const Option: React.FC<IOption> = ({ label, slug, isSelected }) => (
+const Option: React.FC<IOption> = ({ label, slug, isSelected, onClick }) => (
   <div
-    className={`relative h-full flex items-center ${
+    className={`relative h-full sm:h-fit sm:m-4 flex items-center ${
       isSelected
         ? "before:w-full before:h-1 before:absolute before:bottom-0 before:bg-blue700 before:rounded-2"
         : ""
     }`}
   >
-    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={onClick}
+    >
       <Link
         href={`${slug ? `#${slug}` : ""}`}
         noDecoration

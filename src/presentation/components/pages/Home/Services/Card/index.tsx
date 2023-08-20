@@ -15,7 +15,7 @@ const ServiceCard: React.FC<IServiceCard> = ({
 }) => (
   <div
     key={id}
-    className="relative w-full bg-white1000 flex flex-col gap-6 items-center p-6 justify-between shadow-xl rounded-md"
+    className="relative h-full w-full max-w-[20rem] sm:max-w-full bg-white1000 flex flex-col gap-6 items-center p-6 justify-between shadow-xl rounded-md"
   >
     <span>{icon}</span>
 
