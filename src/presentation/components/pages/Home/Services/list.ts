@@ -1,13 +1,11 @@
-import { ReactNode } from "react";
+import { SVGProps } from "react";
 
-import desktopComputerIcon from "@/assets/icons/desktop-computer-icon";
 import webIcon from "@/assets/icons/web-design-icon";
-import worldWebIcon from "@/assets/icons/world-web-icon";
 
 interface IServiceList {
   id: number;
   name: string;
-  icon: any;
+  icon(props: SVGProps<SVGSVGElement>): JSX.Element;
   description: string;
 }
 
@@ -22,14 +20,14 @@ const serviceList: Array<IServiceList> = [
   {
     id: 1,
     name: "Web Application",
-    icon: desktopComputerIcon,
+    icon: webIcon,
     description:
       "Desenvolvo software com interfaces acessíveis e claras, sempre evoluindo conforme o mercado.",
   },
   {
     id: 2,
     name: "Back-End Application",
-    icon: worldWebIcon,
+    icon: webIcon,
     description:
       "Desenvolvo sistemas internos relacionados a API's rest, possibilitando seu consumo em interfaces front-end.",
   },

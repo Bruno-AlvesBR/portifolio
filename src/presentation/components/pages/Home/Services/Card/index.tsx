@@ -19,8 +19,10 @@ const ServiceCard: React.FC<IServiceCard> = ({
   >
     <span>{icon}</span>
 
-    <h3 className="text-9 font-semibold text-blue600 text-center">{name}</h3>
-    <p className="text-6 text-black800">{description}</p>
+    <h3 className="sm:text-7 text-9 font-semibold text-blue600 text-center">
+      {name}
+    </h3>
+    <p className="sm:text-5 text-6 text-black800">{description}</p>
   </div>
 );
 

@@ -35,6 +35,10 @@ module.exports = {
       space: spaceObject,
       paddind: spaceObject,
       border: spaceObject,
+      minWidth: spaceObject,
+      maxWidth: spaceObject,
+      minHeight: spaceObject,
+      maxHeight: spaceObject,
       fontWeight: {
         sm: 400,
         md: 600,
