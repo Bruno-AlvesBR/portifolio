@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import { SVGProps } from "react";
 
 interface IServiceCard {
   id: number;
   name: string;
   description: string;
-  icon: ReactNode;
+  icon(props: SVGProps<SVGSVGElement>): JSX.Element;
 }
 
 const ServiceCard: React.FC<IServiceCard> = ({
@@ -17,7 +17,7 @@ const ServiceCard: React.FC<IServiceCard> = ({
     key={id}
     className="relative h-[40rem] w-full max-w-[20rem] sm:h-auto sm:max-w-full bg-white1000 flex flex-col gap-6 items-center p-6 justify-between shadow-xl rounded-md"
   >
-    <span>{icon}</span>
+    <span>{icon({})}</span>
 
     <h3 className="sm:text-7 text-9 font-semibold text-blue600 text-center">
       {name}
