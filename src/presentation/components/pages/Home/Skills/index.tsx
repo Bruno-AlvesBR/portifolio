@@ -3,6 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 
 import { skillsList } from "./list";
+import { Card } from "./Card";
+
+import { contentSlide } from "./styles";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -33,16 +36,8 @@ const Skills = () => (
       className="items-center w-full flex"
     >
       {skillsList.map((skill) => (
-        <SwiperSlide
-          className="relative min-w-[100px] max-w-[100px] p-8 m-auto flex"
-          key={skill.id}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="bg-white1000 overflow-hidden p-4 rounded-md relative my-auto min-w-[280px] min-h-[340px] max-w-[280px] max-h-[340px]"
-          >
-            <div className="z-10 bg-transparent">{skill.label}</div>
-          </motion.div>
+        <SwiperSlide key={skill.id} className={contentSlide}>
+          <Card {...skill} />
         </SwiperSlide>
       ))}
     </Swiper>

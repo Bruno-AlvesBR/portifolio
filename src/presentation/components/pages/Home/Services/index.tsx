@@ -17,7 +17,7 @@ const Services = () => (
 
     <main className="flex h-full flex-row gap-8 md:flex-wrap items-center justify-center">
       {serviceList.map(({ icon, id, ...props }) => (
-        <ServiceCard key={id} icon={icon()} id={id} {...props} />
+        <ServiceCard key={id} icon={icon} id={id} {...props} />
       ))}
     </main>
   </motion.div>

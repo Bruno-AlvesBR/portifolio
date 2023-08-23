@@ -54,7 +54,7 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
     >
       {repositories?.map((repository) => (
         <SwiperSlide
-          className="flex relative p-8 min-w-[600px] max-w-[600px] min-h-[320px]"
+          className="flex relative p-8 min-w-[600px] max-w-[600px] min-h-[320px] sm:min-w-fit sm:min-h-auto sm:aspect-video"
           key={repository.id}
         >
           <Link href={repository.html_url} target="_blank">
