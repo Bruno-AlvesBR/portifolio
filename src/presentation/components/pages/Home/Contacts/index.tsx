@@ -2,11 +2,14 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useState } from "react";
 
 import { SendGridProvider } from "@/infra/http/Providers/SendGrid";
 import { Input } from "@/presentation/components/core/Input";
 
 const Contacts = () => {
+  const [successRequest, setSuccessRequest] = useState(false);
+
   const validationForm = yup.object({
     name: yup.string().required("O name é obrigatório"),
     email: yup.string().email().required("O email é obrigatório"),
@@ -26,6 +29,8 @@ const Contacts = () => {
     email: string;
     message: string;
   }) => {
+    setSuccessRequest(true);
+
     const { name, email, message } = event;
 
     const sendGridProvider = new SendGridProvider();
@@ -69,12 +74,17 @@ const Contacts = () => {
           />
 
           <motion.button
-            whileHover={{ opacity: 0.7 }}
-            whileTap={{ scale: 0.9 }}
+            {...(!successRequest && {
+              whileHover: { opacity: 0.7 },
+              whileTap: { scale: 0.9 },
+            })}
             type="submit"
-            className="bg-blue700 w-full p-4 rounded-md text-white1000 font-bold"
+            className={`${
+              successRequest ? "bg-white1000" : "bg-blue700 text-white1000"
+            } w-full p-4 rounded-md font-bold`}
+            disabled={successRequest}
           >
-            ENVIAR
+            {successRequest ? "Obrigado por entrar em contato!" : "ENVIAR"}
           </motion.button>
         </form>
       </main>
