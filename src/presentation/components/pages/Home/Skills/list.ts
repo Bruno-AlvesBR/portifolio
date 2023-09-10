@@ -28,6 +28,12 @@ const skillsList: Array<ISkillsList> = [
       "Ferramenta de tipagem de código JS. Apliquei no desenvolvimento do sistema de empresa e sites pessoais.",
   },
   {
+    id: "ingles",
+    label: "Inglês",
+    progress: 50,
+    description: "Intermediária comunicação, leitura e escrita em inglês.",
+  },
+  {
     id: "expressjs",
     label: "Express.JS",
     progress: 70,

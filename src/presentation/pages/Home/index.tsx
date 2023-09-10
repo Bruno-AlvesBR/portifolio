@@ -5,6 +5,7 @@ import { Skills } from "@/presentation/components/pages/Home/Skills";
 import { Services } from "@/presentation/components/pages/Home/Services";
 import { Portifolios } from "@/presentation/components/pages/Home/portifolios";
 import { IGithubRepository } from "@/domain/github/entities";
+import { Contacts } from "@/presentation/components/pages/Home/Contacts";
 
 interface IHomePresentation {
   repositories: Array<IGithubRepository>;
@@ -30,6 +31,10 @@ const HomePresentation: React.FC<IHomePresentation> = ({ repositories }) => (
 
     <MaxContainer id="portifolios" className="py-8 bg-gray100">
       <Portifolios repositories={repositories} />
+    </MaxContainer>
+
+    <MaxContainer id="contatos" className="py-8 bg-gray100">
+      <Contacts />
     </MaxContainer>
   </div>
 );
