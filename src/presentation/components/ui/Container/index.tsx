@@ -1,12 +1,28 @@
-import { PropsWithChildren } from "react";
+import {
+  DetailedHTMLProps,
+  HTMLAttributes,
+  HtmlHTMLAttributes,
+  LegacyRef,
+  PropsWithChildren,
+} from "react";
 
-interface IMaxContainer extends PropsWithChildren {
+type ContainerType = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>;
+
+interface IMaxContainer extends PropsWithChildren, ContainerType {
   className?: string;
   id?: string;
 }
 
-const MaxContainer: React.FC<IMaxContainer> = ({ children, id, className }) => (
-  <div className={`w-full h-full ${className}`}>
+const MaxContainer: React.FC<IMaxContainer> = ({
+  children,
+  id,
+  className,
+  ref,
+}) => (
+  <div ref={ref} className={`w-full h-full ${className}`}>
     <div
       id={id}
       className="relative m-auto flex w-full justify-center items-center max-w-[80rem] gap-6 md:px-4 sm:px-2"

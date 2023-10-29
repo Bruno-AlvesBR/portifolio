@@ -31,7 +31,7 @@ const AboutMe: React.FC<IAboutMe> = () => (
 
       <p className="text-5 sm:text-4">
         Olá, meu nome é Bruno Alves, sou um desenvolvedor FullStack Web, com 1
-        ano e 7 meses de experiência profissional na área de desenvolvimento de
+        ano e 10 meses de experiência profissional na área de desenvolvimento de
         software. Aplico conhecimentos em práticas utilizando minhas hards
         skills no âmbito técnico e soft skills em comunicação e tomadas de
         decisões.

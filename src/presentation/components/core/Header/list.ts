@@ -28,7 +28,7 @@ const menuList: Array<IMenuList> = [
   {
     id: 4,
     label: "portifólio",
-    slug: "portifolio",
+    slug: "portifolios",
   },
   {
     id: 5,

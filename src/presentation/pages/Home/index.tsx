@@ -21,11 +21,14 @@ const HomePresentation: React.FC<IHomePresentation> = ({ repositories }) => (
       <AboutMe />
     </MaxContainer>
 
-    <MaxContainer id="habilitties" className="py-8 bg-gray100">
+    <MaxContainer
+      id="habilitties"
+      className="py-8 bg-gray100 scroll-mt-[200px]"
+    >
       <Skills />
     </MaxContainer>
 
-    <MaxContainer id="services" className="py-8 bg-white950">
+    <MaxContainer id="services" className="py-8 bg-white950 scroll-mt-[200px]">
       <Services />
     </MaxContainer>
 
@@ -33,7 +36,7 @@ const HomePresentation: React.FC<IHomePresentation> = ({ repositories }) => (
       <Portifolios repositories={repositories} />
     </MaxContainer>
 
-    <MaxContainer id="contatos" className="py-8 bg-gray100">
+    <MaxContainer id="contatos" className="py-8 bg-gray100 scroll-m-6">
       <Contacts />
     </MaxContainer>
   </div>

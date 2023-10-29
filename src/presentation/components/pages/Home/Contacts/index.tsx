@@ -6,6 +6,8 @@ import { useState } from "react";
 
 import { SendGridProvider } from "@/infra/http/Providers/SendGrid";
 import { Input } from "@/presentation/components/core/Input";
+import { GmailIcon } from "@/assets/icons/gmail";
+import { TextArea } from "@/presentation/components/core/TextArea";
 
 const Contacts = () => {
   const [successRequest, setSuccessRequest] = useState(false);
@@ -52,7 +54,7 @@ const Contacts = () => {
       <main className="flex h-full flex-row gap-8 md:flex-wrap items-center justify-center">
         <form
           onSubmit={handleSubmit(handleSubmitForm)}
-          className="sm:px-6 items-center flex flex-col gap-6 w-full max-w-[500px] px-14 py-16 bg-white1000 shadow-md rounded-md"
+          className="h-full sm:px-6 items-center flex flex-col gap-6 w-full max-w-[500px] px-14 py-16 bg-white1000 shadow-md rounded-md"
         >
           <h2 className="text-4 text-center">Entre em contato comigo</h2>
 
@@ -67,25 +69,41 @@ const Contacts = () => {
             register={register}
             placeholder={errors.email?.message.toString() || "Email"}
           />
-          <Input
+          <TextArea
             name="message"
             register={register}
             placeholder={errors.message?.message.toString() || "Mensagem"}
+            className="min-h-[150px]"
           />
 
-          <motion.button
-            {...(!successRequest && {
-              whileHover: { opacity: 0.7 },
-              whileTap: { scale: 0.9 },
-            })}
-            type="submit"
-            className={`${
-              successRequest ? "bg-white1000" : "bg-blue700 text-white1000"
-            } w-full p-4 rounded-md font-bold`}
-            disabled={successRequest}
-          >
-            {successRequest ? "Obrigado por entrar em contato!" : "ENVIAR"}
-          </motion.button>
+          <div className="flex flex-row items-center justify-between w-full gap-4">
+            <motion.button
+              {...(!successRequest && {
+                whileHover: { opacity: 0.7 },
+                whileTap: { scale: 0.9 },
+              })}
+              type="submit"
+              className={`${
+                successRequest ? "bg-white1000" : "bg-blue700 text-white1000"
+              } w-full p-4 rounded-md font-bold`}
+              disabled={successRequest}
+            >
+              {successRequest ? "Obrigado por entrar em contato!" : "ENVIAR"}
+            </motion.button>
+
+            <motion.a
+              whileHover={{ opacity: 0.7 }}
+              whileTap={{ scale: 0.9 }}
+              href="mailto:brunoph.faces12@gmail.com"
+              target="_blank"
+              className={
+                "flex flex-row items-center justify-center gap-4 border-black box-border border-[1px] text-black1000 w-full p-4 rounded-md font-bold"
+              }
+            >
+              <GmailIcon width={20} height={20} fill="red" color="red" />
+              GMAIL
+            </motion.a>
+          </div>
         </form>
       </main>
     </motion.div>

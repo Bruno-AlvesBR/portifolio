@@ -37,7 +37,7 @@ const Link: React.FC<ILink> = ({
     <NextLink
       href={href}
       style={styles}
-      className={`text-4 hover:underline focus:underline w-fit outline-blue700 ${className}`}
+      className={`flex text-4 hover:underline focus:underline outline-blue700 ${className}`}
       {...props}
       onClick={onClick}
       onKeyDown={onClick}

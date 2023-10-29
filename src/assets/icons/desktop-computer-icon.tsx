@@ -1,12 +1,13 @@
-import { SVGProps } from "react";
+import * as React from "react";
+import { SVGProps, memo } from "react";
 
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={311}
-    height={258}
-    fill="none"
+    width={24}
+    height={24}
+    fill="#000"
     {...props}
   >
     <path fill="url(#a)" d="M-20 0h350v258H-20z" />

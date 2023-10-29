@@ -1,27 +1,33 @@
-import { SVGProps } from "react";
+import { ReactNode, SVGProps } from "react";
+import DesktopIcon from "@/assets/icons/desktop-computer-icon";
+import Image from "next/image";
 
 interface IServiceCard {
-  id: number;
   name: string;
   description: string;
-  icon(props: SVGProps<SVGSVGElement>): JSX.Element;
+  iconPath: string;
 }
 
 const ServiceCard: React.FC<IServiceCard> = ({
-  id,
   name,
   description,
-  icon,
+  iconPath,
 }) => (
-  <div
-    key={id}
-    className="relative h-[40rem] w-full max-w-[20rem] sm:h-auto sm:max-w-full bg-white1000 flex flex-col gap-6 items-center p-6 justify-between shadow-xl rounded-md"
-  >
-    <span>{icon({})}</span>
+  <div className="relative h-[37rem] w-full max-w-[20rem] sm:h-auto sm:max-w-full bg-white1000 flex flex-col gap-6 items-center p-6 justify-between shadow-xl rounded-md">
+    <div className="gap-4 flex sm:flex-row flex-col items-center">
+      <Image
+        src={iconPath}
+        width={200}
+        height={200}
+        quality={25}
+        className="sm:max-w-2"
+      />
 
-    <h3 className="sm:text-7 text-9 font-semibold text-blue600 text-center">
-      {name}
-    </h3>
+      <h3 className="sm:text-6 text-9 font-semibold text-blue600 text-center">
+        {name}
+      </h3>
+    </div>
+
     <p className="sm:text-5 text-6 text-black800">{description}</p>
   </div>
 );

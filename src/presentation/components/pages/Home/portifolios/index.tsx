@@ -41,7 +41,7 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
       }}
       loop
       effect={"coverflow"}
-      grabCursor={true}
+      grabCursor
       slidesPerView={"auto"}
       coverflowEffect={{
         rotate: 50,
@@ -50,6 +50,7 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
         modifier: 1,
         slideShadows: true,
       }}
+      pagination={{ clickable: true }}
       className="items-center w-full flex"
     >
       {repositories?.map((repository) => (
@@ -57,7 +58,7 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
           className="flex relative p-8 min-w-[600px] max-w-[600px] min-h-[320px] sm:min-w-fit sm:min-h-auto sm:aspect-video"
           key={repository.id}
         >
-          <Link href={repository.html_url} target="_blank">
+          <Link href={repository.redirectUrl} target="_blank">
             <Image
               src={`https://raw.githubusercontent.com/bruno-alvesbr/${repository.name}/${repository.default_branch}/public/project.webp`}
               alt={`project ${repository.name} default image`}
