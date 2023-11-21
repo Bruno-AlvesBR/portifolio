@@ -1,0 +1,23 @@
+name: Running Tests Validation
+
+on: pull_request
+
+jobs:
+  continuos-integration:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/setup-node@v3
+      - name: Set up Node.js 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Run dependencies install and Lint
+        run: |
+          npm install
+          npm run lint
