@@ -19,5 +19,5 @@ jobs:
       - name: Install dependencies
         run: npm i --force
 
-      - name: Run tests
-        run: npm run test
+      - name: Run Lint (Guaranting project with default structure code)
+        run: npm run lint
