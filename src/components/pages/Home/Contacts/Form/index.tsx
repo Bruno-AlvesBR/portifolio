@@ -10,6 +10,7 @@ import { SendgridService } from "@/services/sendgrid";
 import { Input } from "@/components/core/Input";
 import { TextArea } from "@/components/core/TextArea";
 import { GmailIcon } from "@/assets/icons/gmail";
+import { LinkedinIcon } from "@/assets/icons/linkedin";
 
 export const ContactsForm = () => {
   const [successRequest, setSuccessRequest] = useState(false);
@@ -75,46 +76,58 @@ export const ContactsForm = () => {
         className="min-h-[150px]"
       />
 
-      <div className="flex flex-row items-center justify-between w-full gap-4">
-        {successRequest && (
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="toast"
-          >
-            <div className="alert alert-info">
-              <span>Thank you for contact me!</span>
-            </div>
-          </motion.div>
-        )}
-
-        <motion.button
-          {...(!successRequest && {
-            whileHover: { opacity: 0.7 },
-            whileTap: { scale: 0.9 },
-          })}
-          type="submit"
-          className={`${
-            successRequest
-              ? "bg-white1000 text-gray600"
-              : "bg-blue700 text-white1000"
-          } w-full p-4 rounded-md font-bold`}
-          disabled={successRequest}
+      {successRequest && (
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          className="toast"
         >
-          {successRequest ? "Sending..." : "SEND"}
-        </motion.button>
+          <div className="alert alert-info">
+            <span>Thank you for contact me!</span>
+          </div>
+        </motion.div>
+      )}
 
+      <motion.button
+        {...(!successRequest && {
+          whileHover: { opacity: 0.7 },
+          whileTap: { scale: 0.9 },
+        })}
+        type="submit"
+        className={`${
+          successRequest
+            ? "bg-white1000 text-gray600"
+            : "shadow-gray500 shadow-md bg-blue700 text-white1000"
+        } w-full p-4 rounded-md font-bold`}
+        disabled={successRequest}
+      >
+        {successRequest ? "Sending..." : "SEND"}
+      </motion.button>
+
+      <div className="sm:flex-col flex-row flex items-center justify-between w-full gap-4">
         <motion.a
           whileHover={{ opacity: 0.7 }}
           whileTap={{ scale: 0.9 }}
           href="mailto:brunoph.faces12@gmail.com"
           target="_blank"
           className={
-            "flex flex-row items-center justify-center gap-4 border-black box-border border-[1px] text-black1000 w-full p-4 rounded-md font-bold"
+            "flex flex-row items-center justify-center gap-4 border-gray100 box-border bg-white shadow-gray-300 shadow-md text-black1000 w-full p-4 rounded-md font-bold"
           }
         >
           <GmailIcon width={20} height={20} fill="red" color="red" />
           MAIL
+        </motion.a>
+        <motion.a
+          whileHover={{ opacity: 0.7 }}
+          whileTap={{ scale: 0.9 }}
+          href="https://www.linkedin.com/in/bruno-alvesbr/"
+          target="_blank"
+          className={
+            "flex flex-row items-center justify-center gap-4 border-gray100 box-border bg-white shadow-gray-300 shadow-md text-black1000 w-full p-4 rounded-md font-bold"
+          }
+        >
+          <LinkedinIcon width={20} height={20} />
+          LINKEDIN
         </motion.a>
       </div>
     </form>

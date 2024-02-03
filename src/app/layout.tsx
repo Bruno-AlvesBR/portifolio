@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { Header } from "@/components/core/Header";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return { title: "StartSe - A Plataforma do Agora" } as Metadata;
+  return { title: "Bruno Alves | Portifolio" } as Metadata;
 }
 
 export default function RootLayout({ children }: PropsWithChildren) {
