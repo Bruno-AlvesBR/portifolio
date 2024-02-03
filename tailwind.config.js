@@ -17,10 +17,10 @@ const spaceObject = {
 
 module.exports = {
   content: [
-    "./src/presentation/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/presentation/components/**/*.{js,ts,jsx,tsx}",
-    "./src/presentation/hooks/**/*.{js,ts,jsx,tsx}",
-    "./src/presentation/styles/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/hooks/**/*.{js,ts,jsx,tsx}",
+    "./src/styles/*.{js,ts,jsx,tsx}",
     "./src/pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -84,5 +84,6 @@ module.exports = {
   plugins: [
     require("tailwind-scrollbar-hide"),
     require("tailwindcss-font-inter"),
+    require("daisyui"),
   ],
 };

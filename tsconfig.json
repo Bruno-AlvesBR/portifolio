@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -15,22 +19,60 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/assets/*": ["assets/*"],
-      "@/interfaces/*": ["interfaces/*"],
-      "@/pages/*": ["pages/*"],
-      "@/services/*": ["services/*"],
-      "@/styles/*": ["styles/*"],
-      "@/tests/*": ["tests/*"],
-      "@/utils/*": ["utils/*"],
-      "@/presentation/*": ["presentation/*"],
-      "@/infra/*": ["infra/*"],
-      "@/providers/*": ["providers/*"],
-      "@/domain/*": ["domain/*"]
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/hooks/*": [
+        "hooks/*"
+      ],
+      "@/assets/*": [
+        "assets/*"
+      ],
+      "@/interfaces/*": [
+        "interfaces/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ],
+      "@/services/*": [
+        "services/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/tests/*": [
+        "tests/*"
+      ],
+      "@/utils/*": [
+        "utils/*"
+      ],
+      "@/presentation/*": [
+        "presentation/*"
+      ],
+      "@/infra/*": [
+        "infra/*"
+      ],
+      "@/providers/*": [
+        "providers/*"
+      ],
+      "@/domain/*": [
+        "domain/*"
+      ]
     },
-    "incremental": false
+    "incremental": false,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
