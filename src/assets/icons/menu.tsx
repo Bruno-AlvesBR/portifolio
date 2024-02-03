@@ -1,11 +1,15 @@
-const SvgComponent = () => (
+import { SVGProps } from "react";
+
+export const MenuIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={2}
-    stroke="currentColor"
-    className="min-w-12 min-h-12 w-full h-full"
+    stroke="#000000"
+    width={24}
+    height={24}
+    {...props}
   >
     <path
       strokeLinecap="round"
@@ -14,5 +18,3 @@ const SvgComponent = () => (
     />
   </svg>
 );
-
-export default SvgComponent;
