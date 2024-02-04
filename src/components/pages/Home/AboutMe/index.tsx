@@ -30,7 +30,7 @@ const AboutMe = () => (
 
       <Button
         className="sm:w-full max-w-full justify-center"
-        href="/bruno-alves-curriculo.pdf"
+        href="/bruno-alves-curriculum.pdf"
         isDownload
       >
         <p className="p-none text-4 font-medium uppercase text-white950">

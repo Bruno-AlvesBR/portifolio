@@ -11,7 +11,7 @@ const Buttons = () => (
     <Button
       hierarchy="secondary"
       className="uppercase justify-center"
-      href="/bruno-alves-curriculo.pdf"
+      href="/bruno-alves-curriculum.pdf"
       fullWidth
       isDownload
     >
