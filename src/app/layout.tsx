@@ -2,6 +2,7 @@ import "./global.css";
 
 import { PropsWithChildren } from "react";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Header } from "@/components/core/Header";
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body>
         <Header />
         <main>{children}</main>
+        <Analytics />
       </body>
     </html>
   );
