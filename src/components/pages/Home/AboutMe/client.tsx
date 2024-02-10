@@ -11,13 +11,13 @@ export const AboutMeClient = () => (
       transition: { duration: 0.25 },
     }}
     whileHover={{ rotate: 10 }}
-    className="relative w-fit h-fit min-w-[400px] sm:max-w-[250px] sm:min-w-[250px] justify-center"
+    className="relative w-fit h-[400px] min-w-[400px] md:max-h-[150px] md:h-[150px] md:max-w-[150px] md:min-w-[150px] justify-center"
   >
     <Image
-      src="/baloon-me.svg"
-      alt=""
       width={400}
       height={400}
+      src="/baloon-me.svg"
+      alt=""
       style={{ objectFit: "contain" }}
     />
   </motion.div>

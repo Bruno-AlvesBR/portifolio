@@ -24,12 +24,12 @@ const ServiceCard: React.FC<IServiceCard> = ({
         alt={""}
       />
 
-      <h3 className="sm:text-8 text-9 font-semibold text-blue600 text-center">
+      <h3 className="sm:text-6 text-9 font-semibold text-blue600 text-center">
         {name}
       </h3>
     </div>
 
-    <p className="sm:text-5 text-6 text-black800">{description}</p>
+    <p className="sm:text-4 text-6 text-black800">{description}</p>
   </div>
 );
 

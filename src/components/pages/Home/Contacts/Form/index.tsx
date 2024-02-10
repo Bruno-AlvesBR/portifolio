@@ -50,7 +50,7 @@ export const ContactsForm = () => {
   return (
     <form
       onSubmit={handleSubmit(handleSubmitForm)}
-      className="h-full sm:px-6 items-center flex flex-col gap-6 w-full max-w-[500px] px-14 py-16 bg-white1000 shadow-md rounded-md"
+      className="h-fit sm:px-6 items-center flex flex-col gap-6 w-full max-w-[500px] px-8 py-10 bg-white1000 shadow-gray-300 shadow-xl rounded-md"
     >
       <h2 className="text-5 text-center text-black900 font-normal">
         Send a message to me
