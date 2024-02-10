@@ -18,7 +18,6 @@ const Link: React.FC<ILink> = ({
   disabled,
   onClick,
   className,
-  target,
   ...props
 }) => {
   const styles = useMemo(() => {
