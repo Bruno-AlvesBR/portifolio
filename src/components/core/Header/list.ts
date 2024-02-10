@@ -22,8 +22,8 @@ const menuList: Array<IMenuList> = [
   },
   {
     id: 3,
-    label: "Services",
-    slug: "services",
+    label: "Works",
+    slug: "jobs",
   },
   {
     id: 4,
@@ -32,6 +32,11 @@ const menuList: Array<IMenuList> = [
   },
   {
     id: 5,
+    label: "Services",
+    slug: "services",
+  },
+  {
+    id: 6,
     label: "Contacts",
     slug: "contacts",
   },
