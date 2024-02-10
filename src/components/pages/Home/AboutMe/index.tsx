@@ -1,12 +1,16 @@
 import { Button } from "@/components/core/Button";
 import { AboutMeClient } from "./client";
+import { CurriculumContent } from "@/components/core/CurriculumContent";
 
 const AboutMe = () => (
-  <div className="relative flex flex-row sm:flex-col w-full h-full items-center gap-16 sm:gap-8">
+  <div
+    id="about"
+    className="sm:px-6 px-32 relative flex flex-row md:flex-col w-full min-h-[100vh] justify-center items-center gap-32 sm:gap-8 snap-center"
+  >
     <AboutMeClient />
 
-    <div className="relative flex flex-col w-full h-full gap-8">
-      <h1 className="text-blue800 text-8 font-bold uppercase sm:order-0 sm:text-center">
+    <div className="relative flex flex-col w-full h-fit gap-8">
+      <h1 className="text-blue800 text-8 font-bold uppercase sm:order-0 sm:text-center sm:text-6">
         About me
       </h1>
 
@@ -28,15 +32,7 @@ const AboutMe = () => (
         </p>
       </span>
 
-      <Button
-        className="sm:w-full max-w-full justify-center"
-        href="/bruno-alves-curriculum.pdf"
-        isDownload
-      >
-        <p className="p-none text-4 font-medium uppercase text-white950">
-          CURRICULUM
-        </p>
-      </Button>
+      <CurriculumContent fullWidth={false} />
     </div>
   </div>
 );

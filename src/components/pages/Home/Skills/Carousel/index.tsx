@@ -38,13 +38,13 @@ export const Carousel = () => (
     }}
     loop
     modules={[Autoplay, Navigation, Pagination, EffectCoverflow]}
-    className="items-center w-full flex"
+    className="items-center w-full flex h-[500px]"
   >
     {skillsList.map((item) => (
       <SwiperSlide
         key={item.id}
         className={
-          "sm:min-w-[260px] sm:max-w-[260px] gap-8 flex flex-col h-full w-full bg-white1000 overflow-hidden p-4 rounded-md relative my-auto min-w-[280px] min-h-[340px] max-w-[280px] max-h-[340px]"
+          "shadow-md sm:min-w-[250px] sm:max-w-[250px] gap-28 flex flex-col h-full w-full bg-white1000 overflow-hidden p-4 rounded-md relative my-auto min-w-[300px] min-h-[380px] max-w-[300px] max-h-[380px]"
         }
       >
         <Card {...item} />

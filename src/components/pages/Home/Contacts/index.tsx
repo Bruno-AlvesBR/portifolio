@@ -1,14 +1,17 @@
 import { ContactsForm } from "./Form";
 
 const Contacts = () => (
-  <div className="relative flex flex-col gap-8 w-full h-full justify-between">
+  <div
+    id="contacts"
+    className="sm:px-4 sm:mb-4 sm:gap-6 mb-20 relative flex flex-col gap-24 w-full min-h-[100vh] snap-end justify-center"
+  >
     <header>
-      <h2 className="text-blue800 text-8 font-bold uppercase text-center">
+      <h2 className="sm:text-6 text-blue800 text-8 font-bold uppercase text-center">
         Contacts
       </h2>
     </header>
 
-    <main className="flex h-full flex-row gap-8 md:flex-wrap items-center justify-center">
+    <main className="flex h-fit justify-center">
       <ContactsForm />
     </main>
   </div>

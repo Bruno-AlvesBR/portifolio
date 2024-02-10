@@ -6,36 +6,36 @@ import { Services } from "@/components/pages/Home/Services";
 import { Portifolios } from "@/components/pages/Home/Portifolios";
 import { IGithubRepository } from "@/domain/github/entities";
 import { Contacts } from "@/components/pages/Home/Contacts";
+import { Works } from "./Works";
 
 interface IHomePresentation {
   repositories: Array<IGithubRepository>;
 }
 
 const HomePresentation: React.FC<IHomePresentation> = ({ repositories }) => (
-  <div className="relative flex flex-col w-full h-full">
-    <MaxContainer id="start" className="py-32 sm:py-8 flex bg-gray100">
-      <Introduction />
-    </MaxContainer>
+  <div
+    className="relative flex flex-col w-full h-full"
+    style={{
+      scrollSnapType: "y mandatory",
+      overflowY: "scroll",
+      overflowX: "hidden",
+      height: "100vh",
+      maxHeight: "100vh",
+    }}
+  >
+    <Introduction />
 
-    <MaxContainer id="about" className="py-8 bg-white950">
-      <AboutMe />
-    </MaxContainer>
+    <AboutMe />
 
-    <MaxContainer id="skills" className="py-8 bg-gray100 scroll-mt-[200px]">
-      <Skills />
-    </MaxContainer>
+    <Skills />
 
-    <MaxContainer id="services" className="py-8 bg-white950 scroll-mt-[200px]">
-      <Services />
-    </MaxContainer>
+    <Works />
 
-    <MaxContainer id="portifolios" className="py-8 bg-gray100">
-      <Portifolios repositories={repositories} />
-    </MaxContainer>
+    <Portifolios repositories={repositories} />
 
-    <MaxContainer id="contacts" className="py-8 bg-gray100 scroll-m-6">
-      <Contacts />
-    </MaxContainer>
+    <Services />
+
+    <Contacts />
   </div>
 );
 
