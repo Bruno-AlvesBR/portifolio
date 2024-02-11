@@ -10,7 +10,7 @@ const Services = () => (
       Services
     </h2>
 
-    <main className="flex w-full h-max flex-row gap-8 md:flex-wrap justify-center">
+    <main className="sm:gap-2 flex w-full h-max flex-row gap-8 md:flex-wrap justify-center">
       {serviceList.map(({ id, ...props }) => (
         <ServiceCard key={id} {...props} />
       ))}

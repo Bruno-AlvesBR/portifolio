@@ -50,9 +50,9 @@ export const ContactsForm = () => {
   return (
     <form
       onSubmit={handleSubmit(handleSubmitForm)}
-      className="h-fit sm:px-6 items-center flex flex-col gap-6 w-full max-w-[500px] px-8 py-10 bg-white1000 shadow-gray-300 shadow-xl rounded-md"
+      className="h-fit sm:px-6 sm:gap-4 items-center flex flex-col gap-6 w-full max-w-[500px] px-8 py-10 bg-white1000 shadow-gray-300 shadow-xl rounded-md"
     >
-      <h2 className="text-5 text-center text-black900 font-normal">
+      <h2 className="sm:text-4 text-5 text-center text-black900 font-normal">
         Send a message to me
       </h2>
 
@@ -98,24 +98,24 @@ export const ContactsForm = () => {
           successRequest
             ? "bg-white1000 text-gray600"
             : "shadow-gray500 shadow-md bg-blue700 text-white1000"
-        } w-full p-4 rounded-md font-bold`}
+        } w-full p-4 rounded-md font-bold sm:py-2`}
         disabled={successRequest}
       >
         {successRequest ? "Sending..." : "SEND"}
       </motion.button>
 
-      <div className="sm:flex-col flex-row flex items-center justify-between w-full gap-4">
+      <div className="sm:flex-row flex-row flex items-center justify-between w-full gap-4">
         <motion.a
           whileHover={{ opacity: 0.7 }}
           whileTap={{ scale: 0.9 }}
           href="mailto:brunoph.faces12@gmail.com"
           target="_blank"
           className={
-            "flex flex-row items-center justify-center gap-4 border-gray100 box-border bg-white shadow-gray-300 shadow-md text-black1000 w-full p-4 rounded-md font-bold"
+            "flex sm:py-2 flex-row items-center justify-center gap-4 border-gray100 box-border bg-white shadow-gray-300 shadow-md w-full p-4 rounded-md"
           }
         >
           <GmailIcon width={20} height={20} fill="red" color="red" />
-          MAIL
+          <p className="sm:hidden text-black1000 font-bold">MAIL</p>
         </motion.a>
         <motion.a
           whileHover={{ opacity: 0.7 }}
@@ -123,11 +123,11 @@ export const ContactsForm = () => {
           href="https://www.linkedin.com/in/bruno-alvesbr/"
           target="_blank"
           className={
-            "flex flex-row items-center justify-center gap-4 border-gray100 box-border bg-white shadow-gray-300 shadow-md text-black1000 w-full p-4 rounded-md font-bold"
+            "flex sm:py-2 flex-row items-center justify-center gap-4 border-gray100 box-border bg-white shadow-gray-300 shadow-md w-full p-4 rounded-md"
           }
         >
           <LinkedinIcon width={20} height={20} />
-          LINKEDIN
+          <p className="sm:hidden text-black1000 font-bold">LINKEDIN</p>
         </motion.a>
       </div>
     </form>

@@ -13,7 +13,7 @@ interface IInput
 
 const Input: React.FC<IInput> = ({ register, isError, ...props }) => (
   <input
-    className={`bg-white1000 text-black py-4 px-4 w-full shadow-2xl rounded-lg ${
+    className={`sm:py-2 bg-white1000 text-black py-4 px-4 w-full shadow-2xl rounded-lg ${
       isError ? "placeholder-red800" : "placeholder-gray200"
     }`}
     {...props}

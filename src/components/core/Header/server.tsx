@@ -17,8 +17,6 @@ const HeaderServer: React.FC<PropsWithChildren<IHeaderServer>> = ({
   setIsOpenedMenu,
 }) => (
   <>
-    <div className="relative min-h-[3.75rem] max-h-[3.75rem]" />
-
     <header className={container}>
       <nav className={contentNav}>
         <Logo />

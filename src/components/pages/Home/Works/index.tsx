@@ -18,7 +18,7 @@ export const Works = () => {
         <li
           key={work.id}
           className={
-            "sm:flex-col sm:justify-center md:gap-8 md:px-6 flex snap-start h-[100vh] w-[100vw] gap-32 px-16"
+            "sm:flex-col sm:justify-center md:gap-8 md:px-6 flex snap-start min-h-[100vh] w-[100vw] gap-32 px-16"
           }
           style={{ backgroundColor: work.theme }}
         >
@@ -46,14 +46,17 @@ export const Works = () => {
             </span>
 
             <div className="timeline-middle">
-              <VerifyIcon className="fill-gray600" />
+              <VerifyIcon className="fill-gray600 sm:hidden" />
             </div>
           </div>
 
           <div className="sm:items-center sm:w-full md:px-4 sm:pr-2 sm:pl-2 timeline-end flex flex-col gap-10 mx-auto px-52">
             <div className="sm:w-full flex flex-col items-start gap-2">
-              <h1 className="sm:text-4 flex flex-row items-center gap-4 bg-white w-fit px-4 py-2 font-bold text-6 rounded-md text-gray-700">
-                <span className="tooltip" data-tip="Verified experience">
+              <h1 className="sm:w-full sm:justify-center sm:text-4 flex flex-row items-center gap-4 bg-white w-fit px-4 py-2 font-bold text-6 rounded-md text-gray-700">
+                <span
+                  className="tooltip w-5 h-5"
+                  data-tip="Verified experience"
+                >
                   <VerifyIcon fill="black" />
                 </span>
 

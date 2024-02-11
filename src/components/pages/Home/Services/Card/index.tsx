@@ -20,16 +20,16 @@ const ServiceCard: React.FC<IServiceCard> = ({
         width={200}
         height={200}
         quality={25}
-        className="sm:max-w-[5rem]"
+        className="sm:max-w-[3rem] sm:max-h-[3rem] md:max-w-[5rem] md:max-h-[5rem]"
         alt={""}
       />
 
-      <h3 className="sm:text-6 text-9 font-semibold text-blue600 text-center">
+      <h3 className="md:text-6 text-9 font-semibold text-blue600 text-center">
         {name}
       </h3>
     </div>
 
-    <p className="sm:text-4 text-6 text-black800">{description}</p>
+    <p className="md:text-4 text-6 text-black800">{description}</p>
   </div>
 );
 

@@ -5,7 +5,7 @@ import { CurriculumContent } from "@/components/core/CurriculumContent";
 const AboutMe = () => (
   <div
     id="about"
-    className="sm:px-6 px-32 relative flex flex-row md:flex-col w-full min-h-[100vh] justify-center items-center gap-32 sm:gap-8 snap-center"
+    className="sm:px-6 px-32 relative flex flex-row md:flex-col w-full min-h-[100vh] justify-center items-center gap-32 md:gap-12 sm:gap-8 snap-center"
   >
     <AboutMeClient />
 
