@@ -13,7 +13,8 @@ import { GmailIcon } from "@/assets/icons/gmail";
 import { LinkedinIcon } from "@/assets/icons/linkedin";
 
 export const ContactsForm = () => {
-  const [successRequest, setSuccessRequest] = useState(false);
+  const [isLoadingRequest, setIsLoadingRequest] = useState(false);
+  const [isSuccessfullRequest, setIsSuccessfullRequest] = useState(false);
 
   const validationForm = yup.object({
     name: yup.string().required("name is required*"),
@@ -39,11 +40,15 @@ export const ContactsForm = () => {
     const sendGridService = new SendgridService();
 
     try {
+      setIsLoadingRequest(true);
+
       await sendGridService.sendEmail(email, name, message);
-      setSuccessRequest(true);
+      setIsSuccessfullRequest(true);
     } finally {
+      setIsLoadingRequest(false);
+
       await new Promise((resolve) => setTimeout(resolve, 3000));
-      setSuccessRequest(false);
+      setIsSuccessfullRequest(false);
     }
   };
 
@@ -76,7 +81,7 @@ export const ContactsForm = () => {
         className="min-h-[150px]"
       />
 
-      {successRequest && (
+      {isSuccessfullRequest && (
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
@@ -89,19 +94,19 @@ export const ContactsForm = () => {
       )}
 
       <motion.button
-        {...(!successRequest && {
+        {...(!isLoadingRequest && {
           whileHover: { opacity: 0.7 },
           whileTap: { scale: 0.9 },
         })}
         type="submit"
         className={`${
-          successRequest
+          isLoadingRequest
             ? "bg-white1000 text-gray600"
             : "shadow-gray500 shadow-md bg-blue700 text-white1000"
         } w-full p-4 rounded-md font-bold sm:py-2`}
-        disabled={successRequest}
+        disabled={isLoadingRequest}
       >
-        {successRequest ? "Sending..." : "SEND"}
+        {isLoadingRequest ? "Sending..." : "SEND"}
       </motion.button>
 
       <div className="sm:flex-row flex-row flex items-center justify-between w-full gap-4">

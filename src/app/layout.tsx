@@ -16,7 +16,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body>
         <Header />
         <main>{children}</main>
-        <Analytics />
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   );
