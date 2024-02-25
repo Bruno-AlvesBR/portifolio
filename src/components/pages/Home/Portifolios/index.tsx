@@ -15,7 +15,7 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
     className="sm:px-2 md:px-6 relative flex flex-col gap-32 w-full min-h-[100vh] snap-center justify-center px-32"
   >
     <header>
-      <h2 className="text-blue800 text-8 font-bold uppercase text-center">
+      <h2 className="text-blue600 text-8 font-bold uppercase text-center">
         Portifolios
       </h2>
     </header>

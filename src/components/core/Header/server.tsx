@@ -1,32 +1,22 @@
 import { PropsWithChildren } from "react";
-import { motion } from "framer-motion";
 
-import { PopupMenu } from "./PupupMenu";
 import { Logo } from "./Logo";
 import { Menu } from "./Menu";
 
-import { container, contentNav } from "./style";
-
 interface IHeaderServer {
-  setIsOpenedMenu(event: boolean): void;
-  isOpenedMenu: boolean;
+  selectedHash: string;
+  handleSelectOption(path: string, modalBlocked?: boolean): void;
 }
 
 const HeaderServer: React.FC<PropsWithChildren<IHeaderServer>> = ({
-  isOpenedMenu,
-  setIsOpenedMenu,
+  selectedHash,
+  handleSelectOption,
 }) => (
-  <>
-    <header className={container}>
-      <nav className={contentNav}>
-        <Logo />
+  <nav className="w-full max-w-[80rem] relative h-fit flex flex-row justify-between items-center gap-20 sm:gap-3">
+    <Logo handleSelectOption={handleSelectOption} />
 
-        <Menu setIsOpenedMenu={setIsOpenedMenu} isOpenedMenu={isOpenedMenu} />
-      </nav>
-    </header>
-
-    <PopupMenu isOpenedMenu={isOpenedMenu} setIsOpenedMenu={setIsOpenedMenu} />
-  </>
+    <Menu handleSelectOption={handleSelectOption} selectedHash={selectedHash} />
+  </nav>
 );
 
 export { HeaderServer };

@@ -6,7 +6,7 @@ export const MenuIcon = (props: SVGProps<SVGSVGElement>) => (
     fill="none"
     viewBox="0 0 24 24"
     strokeWidth={2}
-    stroke="#000000"
+    stroke="#FFF"
     width={24}
     height={24}
     {...props}

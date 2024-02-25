@@ -9,13 +9,13 @@ const Introduction: React.FC = () => (
     <div className="relative sm:max-w-[400px] sm:flex-col sm:gap-8 md:gap-14 flex flex-row w-fit gap-56 items-center justify-center">
       <div className="flex flex-col sm:w-full w-max h-fit gap-10 sm:order-1">
         <div className="flex flex-col gap-2">
-          <h2 className="text-blue800 font-bold text-12 uppercase sm:text-8">
+          <h2 className="text-blue600 font-bold text-12 uppercase sm:text-8">
             Bruno Alves
           </h2>
 
-          <p className="text-6 font-medium sm:text-4 text-black900">
+          <p className="text-6 font-light sm:text-4 text-white">
             {"I'm "}
-            <strong className="text-blue800">Full-Stack Developer</strong>
+            <strong>Full-Stack Developer</strong>
           </p>
         </div>
 

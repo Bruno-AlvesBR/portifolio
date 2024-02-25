@@ -6,7 +6,7 @@ const Services = () => (
     id="services"
     className="sm:px-3 sm:gap-6 relative flex flex-col gap-24 w-full min-h-[100vh] snap-center justify-center items-center"
   >
-    <h2 className="text-blue800 text-8 font-bold uppercase text-center">
+    <h2 className="text-blue600 sm:text-6 text-8 font-bold uppercase text-center">
       Services
     </h2>
 

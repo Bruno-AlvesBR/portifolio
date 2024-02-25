@@ -3,7 +3,6 @@ import dayjs from "dayjs";
 export const worksList = [
   {
     id: "junior-developer-startse",
-    theme: "#55FFEE",
     title: "Junior Full Stack Developer",
     description: {
       label:

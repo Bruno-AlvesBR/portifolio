@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="pt">
-      <body>
+      <body className="bg-black700">
         <Header />
         <main>{children}</main>
         {process.env.NODE_ENV === "production" && <Analytics />}

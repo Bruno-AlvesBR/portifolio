@@ -1,16 +1,24 @@
-import { motion } from "framer-motion";
+"use client";
+import { Link } from "@/components/ui/Link";
 
-const Logo = () => (
+interface ILogo {
+  handleSelectOption(path: string, modalBlocked?: boolean): void;
+}
+
+const Logo: React.FC<ILogo> = ({ handleSelectOption }) => (
   <div className="flex flex-row">
-    {Object.values("Bruno").map((item) => (
-      <motion.h1
-        key={item}
-        className="w-fit h-fit text-8 font-semibold cursor-default text-blue600"
-        whileHover={{ scale: 1.5 }}
-      >
-        {item}
-      </motion.h1>
-    ))}
+    <Link
+      href="/#start"
+      onClick={() => handleSelectOption(null, true)}
+      noDecoration
+      className="active:scale-75 transition-transform w-fit h-fit text-6 font-semibold text-white"
+    >
+      {Object.values("BRUNO").map((item) => (
+        <span key={item} className="hover:scale-125 transition-all">
+          {item}
+        </span>
+      ))}
+    </Link>
   </div>
 );
 

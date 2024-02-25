@@ -5,41 +5,16 @@ interface IMenuList {
 }
 
 const menuList: Array<IMenuList> = [
-  {
-    id: 0,
-    label: "Start",
-    slug: "start",
-  },
-  {
-    id: 1,
-    label: "About",
-    slug: "about",
-  },
-  {
-    id: 2,
-    label: "Skills",
-    slug: "skills",
-  },
-  {
-    id: 3,
-    label: "Works",
-    slug: "jobs",
-  },
-  {
-    id: 4,
-    label: "Portifolios",
-    slug: "portifolios",
-  },
-  {
-    id: 5,
-    label: "Services",
-    slug: "services",
-  },
-  {
-    id: 6,
-    label: "Contacts",
-    slug: "contacts",
-  },
-];
+  "about",
+  "skills",
+  "jobs",
+  "portifolios",
+  "services",
+  "contacts",
+].map((item, index) => ({
+  id: index,
+  label: item,
+  slug: item,
+}));
 
 export { menuList };

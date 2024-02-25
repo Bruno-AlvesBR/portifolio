@@ -5,7 +5,7 @@ import { PropsWithChildren } from "react";
 
 interface IButton extends PropsWithChildren {
   className?: string;
-  hierarchy?: "primary" | "secondary";
+  hierarchy?: "primary" | "secondary" | "tertiary";
   fullWidth?: boolean;
   href?: string;
   isDownload?: boolean;
@@ -14,8 +14,9 @@ interface IButton extends PropsWithChildren {
 }
 
 const hierarchyStyles = {
-  primary: "bg-blue600 border-none",
-  secondary: "bg-transparent border-blue600 border-[1px]",
+  primary: " bg-blue600 border-none ",
+  secondary: " bg-transparent border-white/20 border-[0.1px] ",
+  tertiary: " bg-transparent border-none hover:bg-blue600 ",
 };
 
 const Button: React.FC<IButton> = ({
@@ -32,11 +33,11 @@ const Button: React.FC<IButton> = ({
 
   return (
     <Component
-      whileHover={{ filter: "brightness(0.5)" }}
       whileTap={{ scale: 0.9 }}
-      className={`flex flex-row  px-4 py-2 rounded-2 ${
-        fullWidth ? "w-full max-w-full" : "w-fit max-w-[160px]"
-      } ${hierarchyStyles[hierarchy]} ${className}`}
+      className={"hover:bg-white/20 hover:border-[1px] border transition-colors flex flex-row px-4 py-2 rounded-2 "
+        .concat(fullWidth ? "w-full max-w-full" : "w-fit max-w-[160px]")
+        .concat(hierarchyStyles[hierarchy])
+        .concat(className)}
       href={href}
       onClick={onClick}
       download={isDownload}

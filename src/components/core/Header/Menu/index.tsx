@@ -1,48 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 import { MenuIcon } from "@/assets/icons/menu";
 import { Option } from "../Option";
 import { menuList } from "../list";
 
 interface IMenu {
-  setIsOpenedMenu(value: boolean): void;
-  isOpenedMenu: boolean;
+  selectedHash: string;
+  handleSelectOption(path: string): void;
 }
 
-const Menu: React.FC<IMenu> = ({ isOpenedMenu, setIsOpenedMenu }) => {
-  const [selectedHash, setSelectedHash] = useState("start");
+const Menu: React.FC<IMenu> = ({ selectedHash, handleSelectOption }) => (
+  <div className="flex flex-row w-fit h-full relative items-center">
+    <button
+      onClick={() => handleSelectOption(selectedHash)}
+      className="border-b-back hidden sm:flex w-full h-fit min-w-12 sm:min-w-6 max-w-12 sm:max-w-6 max-h-12 sm:max-h-6 justify-center relative"
+    >
+      <MenuIcon />
+    </button>
 
-  useEffect(() => {
-    const hashPath = window.location.hash;
-
-    if (hashPath) setSelectedHash(hashPath.replace("#", ""));
-  }, []);
-
-  return (
-    <div className="flex flex-row w-fit h-full relative items-center">
-      <motion.button
-        onClick={() => setIsOpenedMenu(!isOpenedMenu)}
-        whileTap={{ scale: 0.9 }}
-        className="border-b-back hidden sm:flex w-full h-fit min-w-12 max-w-12 max-h-12 justify-center relative"
-      >
-        <MenuIcon />
-      </motion.button>
-
-      <div className="flex w-full h-full gap-6 sm:hidden">
-        {menuList.map((option) => (
-          <Option
-            key={option.id}
-            {...option}
-            setSelectedHash={setSelectedHash}
-            isSelected={selectedHash.includes(option.slug)}
-          />
-        ))}
-      </div>
+    <div className="flex w-full h-full gap-6 sm:hidden">
+      {menuList.map((option) => (
+        <Option
+          key={option.id}
+          {...option}
+          handleSelectOption={handleSelectOption}
+          isSelected={selectedHash?.includes(option.slug)}
+        />
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 export { Menu };

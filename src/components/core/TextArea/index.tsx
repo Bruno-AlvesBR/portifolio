@@ -12,7 +12,7 @@ interface ITextArea
 
 const TextArea: React.FC<ITextArea> = ({ register, className, ...props }) => (
   <textarea
-    className={`bg-white1000 py-4 px-4 w-full shadow-2xl rounded-lg h-full resize-none text-black placeholder-gray200 ${className}`}
+    className={`bg-white/20 py-4 px-4 w-full shadow-2xl rounded-lg h-full resize-none outline-none text-white placeholder-white/50 ${className}`}
     {...props}
     {...(register && register(props.name))}
   />

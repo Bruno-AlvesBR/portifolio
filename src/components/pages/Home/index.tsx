@@ -1,3 +1,4 @@
+"use client";
 import { MaxContainer } from "@/components/ui/Container";
 import { Introduction } from "@/components/pages/Home/Introduction";
 import { AboutMe } from "@/components/pages/Home/AboutMe";
