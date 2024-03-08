@@ -2,11 +2,11 @@ import dayjs from "dayjs";
 
 export const worksList = [
   {
-    id: "junior-developer-startse",
-    title: "Junior Full Stack Developer",
+    id: "intern-developer-startse",
+    title: "Intern Full Stack Developer",
     description: {
       label:
-        "Acting as junior software developer from the company environment, I've participated of all processes of system performance and helpful customer experience and identification.",
+        "Acting as intern software developer from the company environment, I've participated of all processes of system performance and helpful customer experience and identification.",
       lists: [
         {
           title: "Website's Performance Result",
@@ -18,6 +18,23 @@ export const worksList = [
           description:
             "Increased the users engagement (1 milion of access p/monthly).",
         },
+      ],
+    },
+    company: {
+      name: "StartSe",
+      url: "https://www.startse.com",
+    },
+    startedAt: dayjs("02-10-2022"),
+    endedAt: dayjs("12-31-2023"),
+    isActing: false,
+  },
+  {
+    id: "junior-developer-startse",
+    title: "Junior Full Stack Developer",
+    description: {
+      label:
+        "Acting as junior software developer from the company environment, I've participated of all processes of system performance and helpful customer experience and identification.",
+      lists: [
         {
           title: "Users identification",
           description:
@@ -34,7 +51,7 @@ export const worksList = [
       name: "StartSe",
       url: "https://www.startse.com",
     },
-    startedAt: dayjs("02-10-2022"),
+    startedAt: dayjs("01-01-2024"),
     endedAt: dayjs(),
     isActing: true,
   },
