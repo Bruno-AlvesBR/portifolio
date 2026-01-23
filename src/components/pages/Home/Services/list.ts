@@ -16,21 +16,21 @@ const serviceList: Array<IServiceList> = [
     name: "UI / UX Design",
     iconPath: "/assets/svg/web-design-icon.svg",
     description:
-      "I have theoretical and practical knowledge related to prototyping design.",
+      "Possuo conhecimento teórico e prático relacionado ao design de prototipação.",
   },
   {
     id: 1,
-    name: "Web Application",
+    name: "Aplicação Web",
     iconPath: "/assets/svg/desktop-computer-icon.svg",
     description:
-      "I develop software with accessible and clear interfaces, always evolving according to the market.",
+      "Desenvolvo software com interfaces acessíveis e claras, sempre evoluindo de acordo com o mercado.",
   },
   {
     id: 2,
-    name: "Back-End Application",
+    name: "Aplicação Back-End",
     iconPath: "/assets/svg/world-web-icon.svg",
     description:
-      "I develop internal systems related to REST APIs, enabling their consumption in front-end interfaces.",
+      "Desenvolvo sistemas internos relacionados a APIs REST, permitindo seu consumo em interfaces front-end.",
   },
 ];
 

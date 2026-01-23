@@ -7,7 +7,7 @@ const Skills = () => (
   >
     <header>
       <h2 className="text-blue600 text-8 font-bold uppercase text-center">
-        Skills
+        Habilidades
       </h2>
     </header>
 

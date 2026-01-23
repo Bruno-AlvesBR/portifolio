@@ -10,8 +10,10 @@ dayjs.extend(relativeTime);
 
 export const Works = () => {
   const formatWorkDate = (date: string) => dayjs(date).format("DD / MMM / YY");
-  const workTime = (startedAt: string, endedAt: string) =>
-    dayjs(startedAt).from(dayjs(endedAt)).replace("ago", "").trim();
+  const workTime = (startedAt: string, endedAt: string) => {
+    const time = dayjs(startedAt).from(dayjs(endedAt));
+    return time.replace("ago", "").replace("atrás", "").trim();
+  };
 
   return (
     <ul id="jobs" className="timeline timeline-vertical flex">
@@ -33,7 +35,7 @@ export const Works = () => {
                 {!work.isActing ? (
                   `${formatWorkDate(work.endedAt.toISOString())}`
                 ) : (
-                  <strong className="text-black">Acting now</strong>
+                  <strong className="text-black">Atuando agora</strong>
                 )}
               </p>
               <p
@@ -53,7 +55,7 @@ export const Works = () => {
               <h1 className="sm:w-full sm:justify-center sm:text-4 flex flex-row items-center gap-4 bg-white w-fit px-4 py-2 font-bold text-6 rounded-md text-gray-700">
                 <span
                   className="tooltip w-5 h-5"
-                  data-tip="Verified experience"
+                  data-tip="Experiência verificada"
                 >
                   <VerifyIcon fill="black" />
                 </span>
@@ -62,7 +64,7 @@ export const Works = () => {
               </h1>
 
               <span className="flex flex-row gap-1 items-center">
-                <p className="text-white font-medium sm:text-4">Company:</p>
+                <p className="text-white font-medium sm:text-4">Empresa:</p>
                 <Link
                   href={work.company.url}
                   target="_blank"

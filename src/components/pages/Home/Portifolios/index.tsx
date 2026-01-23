@@ -16,7 +16,7 @@ const Portifolios: React.FC<IPortifolios> = ({ repositories }) => (
   >
     <header>
       <h2 className="text-blue600 text-8 font-bold uppercase text-center">
-        Portifolios
+        Portfólios
       </h2>
     </header>
 

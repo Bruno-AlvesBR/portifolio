@@ -10,7 +10,7 @@ const Buttons = () => (
       href="#contacts"
     >
       <p className="p-0 text-4 font-semibold uppercase text-white950">
-        CONTACTS
+        CONTATOS
       </p>
     </Button>
 

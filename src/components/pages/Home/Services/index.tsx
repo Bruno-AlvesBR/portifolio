@@ -7,7 +7,7 @@ const Services = () => (
     className="sm:px-3 sm:gap-6 relative flex flex-col gap-24 w-full min-h-[100vh] snap-center justify-center items-center"
   >
     <h2 className="text-blue600 sm:text-6 text-8 font-bold uppercase text-center">
-      Services
+      Serviços
     </h2>
 
     <main className="sm:gap-2 flex w-full h-max flex-row gap-8 md:flex-wrap justify-center">

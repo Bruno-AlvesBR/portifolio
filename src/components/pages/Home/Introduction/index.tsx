@@ -14,8 +14,8 @@ const Introduction: React.FC = () => (
           </h2>
 
           <p className="text-6 font-light sm:text-4 text-white">
-            {"I'm "}
-            <strong>Full-Stack Developer</strong>
+            {"Sou desenvolvedor "}
+            <strong>Full Stack Sênior</strong>
           </p>
         </div>
 

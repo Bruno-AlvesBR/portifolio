@@ -7,7 +7,7 @@ const Contacts = () => (
   >
     <header>
       <h2 className="sm:text-6 text-blue600 text-8 font-bold uppercase text-center">
-        Contacts
+        Contatos
       </h2>
     </header>
 

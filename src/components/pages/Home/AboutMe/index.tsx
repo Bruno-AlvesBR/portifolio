@@ -19,24 +19,16 @@ const AboutMe = () => (
 
     <div className="relative flex flex-col w-full h-fit gap-8">
       <h1 className="text-blue600 text-8 font-bold uppercase sm:order-0 sm:text-center sm:text-6">
-        About me
+        Sobre mim
       </h1>
 
       <span className="flex flex-col item-start gap-4">
         <p className="text-5 sm:text-4 text-white950 font-light">
-          My name is Bruno Alves, and I am a fullstack developer with nearly two
-          years of experience, dedicated to creating innovative and efficient
-          solutions. Throughout my professional journey, I have gained solid
-          expertise in fullstack development technologies. My experience
-          involves engagement in challenging projects, where I honed my
-          problem-solving skills and contributed to the development of robust
-          applications. I am passionate about continuous learning and actively
-          seek updates to stay abreast of industry trends.
+          Desenvolvedor Full Stack Sênior com mais de 5 anos de experiência em produtos digitais escaláveis, atuando em ambientes de alto tráfego e foco em performance, arquitetura e crescimento de usuários.
         </p>
 
         <p className="text-5 sm:text-4 text-white950 font-light">
-          I am ready to actively contribute in dynamic environments, applying my
-          knowledge and enthusiasm to drive the success of future ventures.
+          Experiência sólida na evolução de sistemas críticos, redução de churn, melhoria de conversão e integração entre front-end e back-end em ambientes de produção.
         </p>
       </span>
 

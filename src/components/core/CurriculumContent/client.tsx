@@ -14,7 +14,7 @@ export const ClientComponent: React.FC<IClientComponent> = ({ fullWidth }) => (
     onClick={() => (document.getElementById("my_modal_1") as any).showModal()}
   >
     <p className="p-none text-4 font-semibold uppercase text-white950">
-      CURRICULUM
+      CURRÍCULO
     </p>
   </Button>
 );

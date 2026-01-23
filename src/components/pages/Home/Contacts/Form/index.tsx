@@ -17,8 +17,8 @@ export const ContactsForm = () => {
   const [isSuccessfullRequest, setIsSuccessfullRequest] = useState(false);
 
   const validationForm = yup.object({
-    name: yup.string().required("name is required*"),
-    email: yup.string().email().required("e-mail is required*"),
+    name: yup.string().required("nome é obrigatório*"),
+    email: yup.string().email().required("e-mail é obrigatório*"),
     message: yup.string(),
   });
 
@@ -58,13 +58,13 @@ export const ContactsForm = () => {
       className="h-fit sm:px-6 sm:py-6 sm:gap-4 items-center flex flex-col gap-6 w-full max-w-[500px] px-8 py-10 bg-black/10 border-[1px] border-white/10 rounded-md"
     >
       <h2 className="sm:text-4 text-5 text-center text-white font-normal">
-        Send a message to me
+        Envie uma mensagem
       </h2>
 
       <Input
         name="name"
         register={register}
-        placeholder={errors.name?.message.toString() || "name"}
+        placeholder={errors.name?.message.toString() || "nome"}
         isError={!!errors.name?.message}
       />
       <Input
@@ -77,7 +77,7 @@ export const ContactsForm = () => {
       <TextArea
         name="message"
         register={register}
-        placeholder={errors.message?.message.toString() || "message"}
+        placeholder={errors.message?.message.toString() || "mensagem"}
         className="min-h-[150px]"
       />
 
@@ -88,7 +88,7 @@ export const ContactsForm = () => {
           className="toast"
         >
           <div className="alert alert-info">
-            <span>Thank you for contact me!</span>
+            <span>Obrigado por entrar em contato!</span>
           </div>
         </motion.div>
       )}
@@ -106,7 +106,7 @@ export const ContactsForm = () => {
         } w-full p-4 rounded-md font-bold sm:py-2 sm:text-4 sm:font-medium`}
         disabled={isLoadingRequest}
       >
-        {isLoadingRequest ? "Sending..." : "SEND"}
+        {isLoadingRequest ? "Enviando..." : "ENVIAR"}
       </motion.button>
 
       <div className="sm:flex-row flex-row flex items-center justify-between w-full gap-4">
@@ -120,7 +120,7 @@ export const ContactsForm = () => {
           }
         >
           <GmailIcon width={20} height={20} fill="red" color="red" />
-          <p className="sm:hidden text-white font-bold">MAIL</p>
+          <p className="sm:hidden text-white font-bold">E-MAIL</p>
         </motion.a>
         <motion.a
           whileHover={{ opacity: 0.7 }}

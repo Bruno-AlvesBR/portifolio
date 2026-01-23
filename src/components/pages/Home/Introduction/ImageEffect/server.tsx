@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const ImageEffectServer = () => (
   <Image
-    src="/profile.webp"
+    src="/foto.jpeg"
     alt="image user profile"
     placeholder="blur"
-    blurDataURL="/profile.webp"
+    blurDataURL="/foto.jpeg"
     style={{ objectFit: "cover" }}
     fill
     priority
