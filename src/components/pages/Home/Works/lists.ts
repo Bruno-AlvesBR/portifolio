@@ -1,85 +1,90 @@
 import dayjs from "dayjs";
 
 export const worksList = [
-  {
-    id: "senior-developer-cidadania4u",
-    title: "Desenvolvedor Full Stack Sênior",
-    description: {
-      label:
-        "Atuando como desenvolvedor Full Stack Sênior, participo do desenvolvimento de funcionalidades de gamificação e onboarding, com foco no aumento de conversão e engajamento de usuários. Implementação e evolução de sistemas de gerenciamento de documentos, garantindo escalabilidade, performance e confiabilidade.",
-      lists: [
-        {
-          title: "Gamificação e Onboarding",
-          description:
-            "Desenvolvimento de funcionalidades de gamificação e onboarding, com foco no aumento de conversão e engajamento de usuários.",
-        },
-        {
-          title: "Sistemas de Gerenciamento de Documentos",
-          description:
-            "Implementação e evolução de sistemas de gerenciamento de documentos, garantindo escalabilidade, performance e confiabilidade.",
-        },
-        {
-          title: "Otimização de Fluxos Críticos",
-          description:
-            "Otimização de fluxos críticos da aplicação, contribuindo para redução de churn e melhoria de performance.",
-        },
-        {
-          title: "Evolução da Arquitetura Backend",
-          description:
-            "Evolução da arquitetura backend para suportar crescimento da base de usuários e novas demandas de produto.",
-        },
-        {
-          title: "Tecnologias",
-          description:
-            "Desenvolvimento com Node.js, Java, Angular, MongoDB, MySQL, AWS, Docker e práticas de arquitetura e performance.",
-        },
-      ],
+ {
+  id: "software-engineer-cidadania4u",
+  title: "Software Engineer",
+  description: {
+   label:
+    "Desenvolvimento de funcionalidades de gamificação e onboarding utilizando Angular, TypeScript, Node.js e APIs REST. Implementação e evolução de sistemas de gerenciamento de documentos em backend Node.js e Java, integrados a MongoDB e MySQL. Evolução da arquitetura backend em AWS, utilizando SQS, SNS, Lambda e Redis.",
+   lists: [
+    {
+     title: "Gamificação e Onboarding",
+     description:
+      "Desenvolvimento de funcionalidades de gamificação e onboarding utilizando Angular, TypeScript, Node.js e APIs REST, focadas no aumento de conversão e engajamento de usuários.",
     },
-    company: {
-      name: "Cidadania4u",
-      url: "https://www.cidadania4u.com.br",
+    {
+     title: "Sistemas de Gerenciamento de Documentos",
+     description:
+      "Implementação e evolução de sistemas de gerenciamento de documentos em backend Node.js e Java, integrados a MongoDB e MySQL, garantindo escalabilidade, performance e confiabilidade.",
     },
-    startedAt: dayjs("2024-04-01"),
-    endedAt: dayjs(),
-    isActing: true,
-    color: "#630f2b",
+    {
+     title: "Otimização de Fluxos Críticos",
+     description:
+      "Otimização de fluxos críticos da aplicação aplicando Clean Code, SOLID e MVC, contribuindo para redução de churn e melhoria significativa de performance.",
+    },
+    {
+     title: "Evolução da Arquitetura Backend",
+     description:
+      "Evolução da arquitetura backend em AWS, utilizando SQS, SNS, Lambda e Redis para suportar o crescimento da base de usuários e novas demandas de produto.",
+    },
+    {
+     title: "Responsabilidades",
+     description:
+      "Desenvolvimento com Node.js, Express.js, Java (Spring Boot), Angular, APIs REST (Swagger), MongoDB, MySQL, PostgreSQL, AWS, Docker, CI/CD e arquitetura de microsserviços.",
+    },
+   ],
   },
-  {
-    id: "developer-startse",
-    title: "Desenvolvedor Full Stack",
-    description: {
-      label:
-        "Atuei na reconstrução da plataforma da empresa junto a um time médio de 5 desenvolvedores, com foco no aumento de engajamento de usuários e intensificação da identificação destes. Participei do planejamento com as equipes de Design e Produto, implementando melhorias visuais e aprimorando a experiência do usuário em toda a plataforma.",
-      lists: [
-        {
-          title: "Aumento de Engajamento",
-          description:
-            "Aumento do engajamento de usuários, atingindo cerca de 1 milhão de acessos mensais.",
-        },
-        {
-          title: "Melhoria de Performance",
-          description:
-            "Melhoria de performance do sistema, elevando a pontuação de 40 para 90 no painel de desempenho da Vercel.",
-        },
-        {
-          title: "Taxa de Identificação de Usuários",
-          description:
-            "Aumento da taxa de identificação de usuários de 0,5% para 4% do total de usuários ativos.",
-        },
-        {
-          title: "Colaboração com Times",
-          description:
-            "Colaborei diretamente com os times de engajamento e aquisição, otimizando a experiência do usuário e a eficácia na captação de leads.",
-        },
-      ],
-    },
-    company: {
-      name: "StartSe",
-      url: "https://www.startse.com",
-    },
-    startedAt: dayjs("2021-09-01"),
-    endedAt: dayjs("2024-04-01"),
-    isActing: false,
-    color: "#0080ed",
+  company: {
+   name: "Cidadania4u",
+   url: "https://www.cidadania4u.com.br",
   },
+  startedAt: dayjs("2024-04-01"),
+  endedAt: dayjs("2026-01-31"),
+  isActing: false,
+  color: "#630f2b",
+ },
+ {
+  id: "software-engineer-startse",
+  title: "Software Engineer",
+  description: {
+   label:
+    "Reconstrução da plataforma web utilizando React.js, Next.js, TypeScript e Node.js, atuando em um time multidisciplinar com foco em escalabilidade e experiência do usuário. Suporte a uma plataforma com cerca de 1 milhão de acessos mensais.",
+   lists: [
+    {
+     title: "Reconstrução da Plataforma",
+     description:
+      "Reconstrução da plataforma web utilizando React.js, Next.js, TypeScript e Node.js, atuando em um time multidisciplinar com foco em escalabilidade e experiência do usuário.",
+    },
+    {
+     title: "Planejamento e Execução Técnica",
+     description:
+      "Planejamento e execução técnica em conjunto com as equipes de Produto e Design, implementando melhorias visuais e funcionais em toda a plataforma.",
+    },
+    {
+     title: "Otimização de Performance",
+     description:
+      "Otimização de performance frontend e backend, elevando a pontuação de desempenho de 40 para 90 no Vercel.",
+    },
+    {
+     title: "Sistemas de Autenticação",
+     description:
+      "Implementação de sistemas de autenticação e identificação de usuários em backend Node.js, aumentando a taxa de identificação de 0,5% para 4% dos usuários ativos.",
+    },
+    {
+     title: "Escala de Tráfego",
+     description:
+      "Suporte a uma plataforma com cerca de 1 milhão de acessos mensais, garantindo estabilidade e performance.",
+    },
+   ],
+  },
+  company: {
+   name: "StartSe",
+   url: "https://www.startse.com",
+  },
+  startedAt: dayjs("2021-09-01"),
+  endedAt: dayjs("2024-04-01"),
+  isActing: false,
+  color: "#0080ed",
+ },
 ];
